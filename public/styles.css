@@ -69,3 +69,77 @@ header{
     border-radius: 15px;
     transition: all 300ms ease-in-out;
 }
+
+.card{
+    background-color: white;
+    margin: 45px auto;
+    width: 800px;
+    min-height: 400px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
+
+    animation-name: up;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;    
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+
+    }to{
+        opacity: 1;
+
+    }
+}
+
+
+.details{
+    padding: 32px;
+}
+
+.details .item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+
+}
+
+.details .item:last-child{
+    border: none;
+}
+.details h3,
+.details .item div:nth-child(1){
+    color: var(--second-color);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2){
+    color: #777;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--select-color);
+}
+
+.details .item span{
+    padding: 8px 16px;
+    background-color: var(--second-color);
+    border-radius: 16px;
+    color: #444;
+    margin-right: 4px;
+    margin-top: 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: inline-block;
+}
