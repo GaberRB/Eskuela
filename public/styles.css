@@ -143,3 +143,36 @@ header{
     text-transform: uppercase;
     display: inline-block;
 }
+/*==form==*/
+input{
+    width: 100%;
+    outline: none;
+    color: #777;
+    font-weight: bold;
+    font-size: 18px;
+}
+input[type="radio"]{
+    width: initial;
+    color: white;
+    margin-right: 4px;
+}
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+select{
+    width: 100%;
+    padding: 12px 0;
+    color: #777;
+    font-size: 18px;
+}
+
+button[type="submit"]{
+    width: 100%;
+    background-color: var(--select-color);
+    border-radius: 8px;
+    padding: 8px 32px;
+    margin-top: 32px;
+    font-size: 16px;
+    color: white;
+}
