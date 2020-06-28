@@ -2,71 +2,11 @@
 
 {% block content %}
     <form class="card" method="POST" action="/teachers">
-        <section class="avatar" style= "background: url(https://source.unsplash.com/collection/768217/500x500) no-repeat center center /cover">
+        <section class="avatar" style= "background: url(https://source.unsplash.com/collection/895539/500x500) no-repeat center center /cover">
         </section>
         <section class="details">
             <h3>cadastrar Professor</h3>
-
-            <div class="item">
-                <div>Nome Completo</div>
-                <div>
-                    <input 
-                        type="text" 
-                        name="name"
-                        placeholder="Nome completo"
-                     >
-                </div>
-            </div>
-            <div class="item">
-                <div>Avatar</div>
-                <div>
-                    <input 
-                        type="url" 
-                        name="avatar_url"
-                        placeholder="http://" 
-                    >
-                </div>
-            </div>
-            <div class="item">
-                <div>Data nascimento</div>
-                <div>
-                    <input 
-                        type="date" 
-                        name="birth"
-                       
-                     >
-                </div>
-            </div>
-             <div class="item">
-                <div>Escolaridade</div>
-                <div>
-                      <select name="scholarity">
-                        <option value="highschool">Ensino médio</option>
-                        <option value="university">Ensino superior</option>
-                        <option value="master">Mestrado</option>
-                        <option value="doctor">Doutorado</option>
-                      </select>                    
-                    
-                </div>
-            </div>
-            <div class="item">
-                <div>Tipo de Aula</div>
-                <div>
-                    <span><input type="radio" name="typeClass" value="presential" checked>Presencial</span>
-                    <span><input type="radio" name="typeClass" value="ead">EAD</span>
-                </div>
-            </div>
-            <div class="item">
-                <div>Disciplinas</div>
-                <div>
-                    <input 
-                        type="text" 
-                        name="vocation" 
-                        placeholder="separar por virgula"
-                    >
-                </div>
-            </div>
-            <button type="submit"> Salvar </button>
+            {% include 'teachers/fields.njk' %}
         </section>
     </form>
 {% endblock content %}
