@@ -1,0 +1,97 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+    <div class="card">
+        <section class="avatar" style= "background: url({{teacher.avatar_url}}) no-repeat center center /cover">
+        </section>
+        <section class="details">
+            <h3>Detalhes</h3>
+
+            <div class="item">
+                <div>Teacher</div>
+                <div>{{teacher.name}}</div>
+            </div>
+            <div class="item">
+                <div>Idade</div>
+                <div>{{teacher.age}}</div>
+            </div>
+            <div class="item">
+                <div>Tipo de Aula</div>
+                <div>
+                    <span>
+                        <input 
+                            type="radio" 
+                            name="typeClass"
+                            value=presential
+                            {% if teacher.typeClass == 'presential' %}
+                                checked
+                            {% endif %}
+                            >
+                            Presencial
+                    </span>
+                    <span>
+                        <input 
+                            type="radio" 
+                            name="typeClass"
+                            value="ead"
+                            {% if teacher.typeClass == 'ead' %}
+                                checked
+                            {% endif %}
+                            >
+                            EAD
+                    </span>
+                </div>
+            </div>
+            <div class="item">
+            <div>Escolaridade</div>
+                <div>
+                      <select name="scholarity" disabled="true">
+                        <option 
+                            value="highschool"
+                            {% if teacher.scholarity == "highschool" %}
+                                selected
+                            {% endif %}
+                            >Ensino médio
+                        </option>
+                        <option 
+                            value="university"
+                            {% if teacher.scholarity == "university" %}
+                                selected
+                            {% endif %}
+                            >Ensino superior
+                        </option>
+                        <option 
+                            value="master"
+                            {% if teacher.scholarity == "master" %}
+                                selected
+                            {% endif %}
+                            >Mestrado
+                        </option>
+                        <option 
+                            value="doctor"
+                            {% if teacher.scholarity == "doctor" %}
+                                selected
+                            {% endif %}
+                            >Doutorado
+                        </option>
+                      </select>                    
+                    
+                </div>
+            </div>
+            <div class="item">
+                <div>Aulas</div>
+                <div>
+                    {% for vocation in teacher.vocation %}
+                         <span>{{vocation}}</span>
+                    {% endfor %}
+                   
+                </div>
+            </div>
+            <div class="item">
+                <div>Desde</div>
+                <div>{{teacher.created_at}}</div>
+            </div>
+            <a href="#" class="button">Editar</a>
+        </section>
+    </div>
+{% endblock content %}
