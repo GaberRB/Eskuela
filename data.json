@@ -1,13 +1,13 @@
 {
   "teachers": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Gabriel Rios Belmiro",
       "avatar_url": "https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
       "birth": 689126400000,
       "scholarity": "university",
       "typeClass": "ead",
-      "vocation": "SQL, PLSQL, JS, Node.JS, HTML, CSS",
+      "vocation": "SQL, PLSQL, JS, Node.JS",
       "created_at": 1593368680210
     },
     {
@@ -16,8 +16,8 @@
       "avatar_url": "https://images.unsplash.com/photo-1543096222-72de739f7917?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
       "birth": 347155200000,
       "scholarity": "master",
-      "typeClass": "ead",
-      "vocation": "dasdas, asdada",
+      "typeClass": "presential",
+      "vocation": "Geografia, Biologia  ",
       "created_at": 1593369220874
     },
     {
