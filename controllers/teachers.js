@@ -76,7 +76,7 @@ exports.edit = function(req, res){
 
     teacher = {
         ...foundTeacher,
-        date: date(foundTeacher.birth)
+        date: date(foundTeacher.birth).iso
     }
 
 

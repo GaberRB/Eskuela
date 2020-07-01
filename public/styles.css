@@ -136,7 +136,8 @@ header{
 }
 
 .details .item span,
-.lines td:nth-child(2) span{
+.lines td:nth-child(2) span,
+.lines td:nth-child(3) span{
     padding: 8px 16px;
     background-color: var(--second-color);
     border-radius: 16px;
@@ -189,7 +190,7 @@ a.button{
     text-decoration: none;
 }
 
-#form-button button[type="submit"]{
+#form-delete button[type="submit"]{
     background-color: lightcoral;
 }
 
@@ -245,7 +246,11 @@ tbody tr td:first-child span{
     box-shadow: 3px 1px 6px -4px blue;
     border: 2px solid white;
 }
-
+.table-container a{
+ margin-bottom: 12px;
+ display: inline-block;
+}
+.table-container a,
 tbody tr td:last-child a{
     background-color: var(--select-color);
     padding: 8px 16px;

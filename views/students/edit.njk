@@ -14,12 +14,12 @@
 
             <input type="hidden" name="id" value= {{student.id}}>
         </form>  
-        <form id="form-button" action="/students?_method=DELETE"  method="POST">
+        <form id="form-delete" action="/students?_method=DELETE"  method="POST">
             <button type="submit">Deletar</button>
             <input type="hidden" name="id" value= {{student.id}}>
         </form>  
     </section>
-        
+    {% include 'confirm.njk' %}        
  
 </div>
  

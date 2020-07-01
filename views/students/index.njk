@@ -2,24 +2,49 @@
 
 {% block content %}
     <div class="card table-container">
+        <a href="/students/create">Novo</a>
         <table width="100%">
             <thead>
+                
                 <tr>
                     <th>Name</th>
-                    <th>Acompanhamento</th>
+                    <th>Email</th>
+                    <th>Ano Escolar</th>
                     <th>Ação</th>
 
                 </tr>
             </thead>
             <tbody>
-                {% for teacher in teachers %}
+                
+                {% for student in students %}
                 <tr class="lines">
                     <td>
-                        <span style="background-image: url({{teacher.avatar_url}})"></span>
-                        {{teacher.name}}
+                        <span style="background-image: url({{student.avatar_url}})"></span>
+                        {{student.name}}
                     </td>
-                    <td id="{{teacher.id}}">{{teacher.vocation}}</td>
-                    <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
+                    <td>{{student.email}}</td>
+                    {% if student.scholarity == "EF5" %}
+                          <td><span>5º Fundamental</span></td>
+                    {% endif %}
+                    {% if student.scholarity == "EF56" %}
+                          <td><span>6º Fundamental</span></td>
+                    {% endif %}
+                    {% if student.scholarity == "EF7" %}
+                          <td><span>7º Fundamental</span></td>
+                    {% endif %}
+                    {% if student.scholarity == "EF8" %}
+                          <td><span>8º Fundamental</span></td>
+                    {% endif %}
+                    {% if student.scholarity == "EM1" %}
+                          <td><span>1º Colegial</span></td>
+                    {% endif %}
+                    {% if student.scholarity == "EM2" %}
+                          <td><span>2º Colegial</span></td>
+                    {% endif %}
+                    {% if student.scholarity == "EM3" %}
+                          <td> <span>3º Colegial</span></td>
+                    {% endif %}                        
+                    <td><a href="/students/{{student.id}}">Ver</a></td>
                 </tr>
                 {% endfor %}
                 

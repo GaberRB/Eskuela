@@ -4,9 +4,8 @@ const { age, date, grade } = require('../utils')
 const Intl = require('intl')
 
 exports.index = function(req, res){
-
-
-    return res.render('students/index', {students: data.students})
+ 
+    return res.render('students/index', {students : data.students})
 }
 exports.post = function(req, res){
 
