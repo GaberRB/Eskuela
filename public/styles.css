@@ -184,3 +184,14 @@ a.button{
     text-align: center;
     text-decoration: none;
 }
+
+#form-button button[type="submit"]{
+    background-color: lightcoral;
+}
+
+button[type="submit"]{
+   width: 40%;
+   float: left;
+   margin-top: 29px;
+   margin-right: 29px;
+}    

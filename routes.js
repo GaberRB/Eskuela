@@ -22,6 +22,10 @@ routes.get('/teachers/:id/edit', teachers.edit)
 //pegando uma função de um arquivo externo
 routes.post('/teachers', teachers.post)
 
+routes.put('/teachers', teachers.put)
+
+routes.delete('/teachers', teachers.delete)
+
 
 routes.get('/students', function(req, res){
     return res.send('ok')

@@ -91,7 +91,8 @@
                 <div>Desde</div>
                 <div>{{teacher.created_at}}</div>
             </div>
-            <a href="#" class="button">Editar</a>
+            <input type="hidden" name="id" value= {{teacher.id}}>
+            <a href="/teachers/{{teacher.id}}/edit" class="button">Editar</a>
         </section>
     </div>
 {% endblock content %}
