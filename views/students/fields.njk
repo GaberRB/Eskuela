@@ -6,7 +6,7 @@
                         type="text" 
                         name="name"
                         placeholder="Nome completo"
-                        value="{{teacher.name}}"
+                        value="{{student.name}}"
                      >
                 </div>
             </div>
@@ -17,7 +17,7 @@
                         type="url" 
                         name="avatar_url"
                         placeholder="http://" 
-                        value="{{teacher.avatar_url}}"
+                        value="{{student.avatar_url}}"
                     >
                 </div>
             </div>
@@ -27,7 +27,18 @@
                     <input 
                         type="date" 
                         name="birth"
-                        value="{{teacher.date}}"
+                        value="{{student.date}}"
+                       
+                     >
+                </div>
+            </div>
+            <div class="item">
+                <div>Email</div>
+                <div>
+                    <input 
+                        type="email" 
+                        name="email"
+                        value="{{student.email}}"
                        
                      >
                 </div>
@@ -37,72 +48,65 @@
                 <div>
                       <select name="scholarity">
                         <option 
-                            value="highschool"
-                            {% if teacher.scholarity == "highschool" %}
+                            value="EF5"
+                            {% if student.scholarity == "EF5" %}
                                 selected
                             {% endif %}
-                            >Ensino médio
+                            >5º Fundamental
                         </option>
                         <option 
-                            value="university"
-                            {% if teacher.scholarity == "university" %}
+                            value="EF6"
+                            {% if student.scholarity == "EF6" %}
                                 selected
                             {% endif %}
-                            >Ensino superior
+                            >6º Fundamental
                         </option>
                         <option 
-                            value="master"
-                            {% if teacher.scholarity == "master" %}
+                            value="EF7"
+                            {% if student.scholarity == "EF7" %}
                                 selected
                             {% endif %}
-                            >Mestrado
+                            >7º Fundamental
                         </option>
                         <option 
-                            value="doctor"
-                            {% if teacher.scholarity == "doctor" %}
+                            value="EF8"
+                            {% if student.scholarity == "EF8" %}
                                 selected
                             {% endif %}
-                            >Doutorado
+                            >8º Fundamental
+                        </option>
+                        <option 
+                            value="EM1"
+                            {% if student.scholarity == "EM1" %}
+                                selected
+                            {% endif %}
+                            >1º Ensino Médio
+                        </option>
+                        <option 
+                            value="EM2"
+                            {% if student.scholarity == "EM2" %}
+                                selected
+                            {% endif %}
+                            >2º Ensino Médio
+                        </option>
+                        <option 
+                            value="EM3"
+                            {% if student.scholarity == "EM3" %}
+                                selected
+                            {% endif %}
+                            >3º Ensino Médio
                         </option>
                       </select>                    
                     
                 </div>
             </div>
             <div class="item">
-                <div>Tipo de Aula</div>
-                <div>
-                    <span>
-                        <input 
-                            type="radio" 
-                            name="typeClass"
-                            value=presential
-                            {% if teacher.typeClass == 'presential' %}
-                                checked
-                            {% endif %}
-                            >
-                            Presencial
-                    </span>
-                    <span>
-                        <input 
-                            type="radio" 
-                            name="typeClass"
-                            value="ead"
-                            {% if teacher.typeClass == 'ead' %}
-                                checked
-                            {% endif %}
-                            >
-                            EAD
-                    </span>
-                </div>
-            </div>
-            <div class="item">
-                <div>Disciplinas</div>
+                <div>Carga horária</div>
                 <div>
                     <input 
-                        type="text" 
-                        name="vocation" 
-                        placeholder="separar por virgula"
-                        value ="{{teacher.vocation}}"
+                        type="number" 
+                        name="hours" 
+                        value ="{{student.hours}}"
                     >
                 </div>
             </div>

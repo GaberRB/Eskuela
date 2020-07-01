@@ -1,6 +1,6 @@
 const fs = require('fs')
 const data = require('../data.json')
-const { age, date } = require('../utils')
+const { age, date, grade } = require('../utils')
 const Intl = require('intl')
 
 exports.index = function(req, res){
@@ -10,36 +10,29 @@ exports.index = function(req, res){
 }
 exports.post = function(req, res){
 
-    //validação dos campos
     const keys = Object.keys(req.body)
     
     for (key of keys ){
-        //desta forma o loop passa a chave dentro do array de objetos
         if (req.body[key] == "" ){
             return res.send('Por favor, Preencha todos os campos!')
         } 
     }
 
-    //destruction
-    let {name, avatar_url, birth, scholarity, typeClass, vocation} = req.body
-
-    const id = Number(data.students.length + 1)
-    birth = Date.parse(birth)
-    const created_at = Date.now()
+    birth = Date.parse(req.body.birth)
+    let id = 1
+    const lastStudant = data.students[data.students.length - 1]
+    
+    if(lastStudant){
+        id = lastStudant.id + 1
+    }
     data.students.push({
         id,
-        name,
-        avatar_url,
-        birth,
-        scholarity,
-        typeClass,
-        vocation,
-        created_at
+        ...req.body,
+        birth
     } 
 ) 
     
 
-    //JSON.stringfy transforma objeto em JSON
     fs.writeFile('data.json', JSON.stringify(data, null, 2), function(err){
         if (err) return res.send('Arquivo incorreto')
         
@@ -60,8 +53,8 @@ exports.show = function(req, res){
     const student = {
         ...foundStudent,
         age: age(foundStudent.birth),
-        created_at: new Intl.DateTimeFormat("pt-BR").format(foundStudent.created_at),
-        vocation: foundStudent.vocation.split(',')
+        birthDay: date(foundStudent.birth).birthDay,
+        grade : grade(foundStudent.scholarity)
     }
     return res.render('students/show', {student})
 }
@@ -76,7 +69,7 @@ exports.edit = function(req, res){
 
     student = {
         ...foundStudent,
-        date: date(foundStudent.birth)
+        date: date(foundStudent.birth).iso
     }
 
 

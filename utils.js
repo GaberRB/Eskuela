@@ -25,7 +25,42 @@ module.exports = {
 
         const day = `0${date.getUTCDate()}`.slice(-2)
 
-        return `${year}-${month}-${day}`
+        return {
+            birthDay: `${day}/${month}`,
+            iso :  `${year}-${month}-${day}`
+        }
+        
+       
 
+    },
+
+    grade: function grade(scholarity){
+        let grade ='';
+        switch (scholarity){
+            case 'EF5':
+                grade = '5º Ensino Fundamental';
+                break;
+            case 'EF6':
+                grade = '6º Ensino Fundamental';
+                break;
+            case 'EF7':
+                grade = '7º Ensino Fundamental';
+                break;
+            case 'EF8':
+                grade = '8º Ensino Fundamental';
+                break;
+            case 'EM1':
+                grade = '1º Colegial';
+                break;
+            case 'EM2':
+                grade = '2º Colegial';
+                break;                      
+            case 'EM3':
+                grade = '3º Colegial';
+                break;         
+        
+        }
+
+        return grade
     }
 }
