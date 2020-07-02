@@ -4,9 +4,9 @@
       "id": 1,
       "name": "GABRIEL RIOS BELMIRO",
       "avatar_url": "https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "birth": 973209600000,
+      "birth": 941587200000,
       "email": "grios0311@gmail.com",
-      "scholarity": "EF7",
+      "scholarity": "EM3",
       "hours": "50"
     },
     {
@@ -20,16 +20,6 @@
     }
   ],
   "teachers": [
-    {
-      "id": 1,
-      "name": "Gabriel Rios Belmiro",
-      "avatar_url": "https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "birth": 689126400000,
-      "scholarity": "university",
-      "typeClass": "presential",
-      "vocation": "SQL, PLSQL, JS, Node.JS",
-      "created_at": 1593368680210
-    },
     {
       "id": 2,
       "name": "Kamilly Ana Oliveira",
@@ -59,6 +49,26 @@
       "typeClass": "ead",
       "vocation": "Inglês, Matemática, Frances ",
       "created_at": 1593369482189
+    },
+    {
+      "id": 4,
+      "name": "Gabriel Rios",
+      "avatar_url": "https://images.unsplash.com/photo-1509460913899-515f1df34fea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "birth": 689126400000,
+      "scholarity": "master",
+      "typeClass": "presential",
+      "vocation": "SQL, PLSQL, JS, Node.JS",
+      "created_at": 1593649844526
+    },
+    {
+      "id": 5,
+      "name": "Kiora Wins ",
+      "avatar_url": "https://images.unsplash.com/photo-1543096222-72de739f7917?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "birth": -286502400000,
+      "scholarity": "master",
+      "typeClass": "presential",
+      "vocation": "SQL, PLSQL, JS, Node.JS",
+      "created_at": 1593651714576
     }
   ]
 }
