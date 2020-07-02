@@ -16,7 +16,7 @@
 
 <h3>Na Pratica</h3>
 
-<img src="https://user-images.githubusercontent.com/28874479/86302844-65033980-bbe0-11ea-9e03-af51a8a3c0dc.gif"/>
+<img src="https://user-images.githubusercontent.com/28874479/86304923-c0382a80-bbe6-11ea-8e15-086258d04784.gif"/>
 
 Tecnologias utilizadas :
 
