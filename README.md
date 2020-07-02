@@ -1,5 +1,3 @@
-# Eskuela
-
 <h1> # Eskuela</h1>
 
 <b># Modulo 4 Desafio</b>
