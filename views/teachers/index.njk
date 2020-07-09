@@ -19,6 +19,8 @@
                         <span style="background-image: url({{teacher.avatar_url}})"></span>
                         {{teacher.name}}
                     </td>
+
+                    {% set name = value %}
                     <td><span>{{teacher.vocation}}</span></td>
                     <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
                 </tr>
