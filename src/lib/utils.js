@@ -1,5 +1,5 @@
 module.exports = {
-    age: function age (timestamp){
+    age(timestamp){
 
         const today = new Date()
 
@@ -15,7 +15,7 @@ module.exports = {
    
         return age
     },
-    date: function date(timestamp){
+    date(timestamp){
 
         const date = new Date(timestamp)
 
@@ -34,7 +34,7 @@ module.exports = {
 
     },
 
-    grade: function grade(scholarity){
+    grade(scholarity){
         let grade ='';
         switch (scholarity){
             case 'EF5':
