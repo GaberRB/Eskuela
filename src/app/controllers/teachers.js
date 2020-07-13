@@ -5,11 +5,19 @@ const Intl = require('intl')
 module.exports = {
 
     index(req, res){
+        const { filter } = req.query
 
-        Teacher.all(function(teachers){
+        if(filter){
+            Teacher.findBy(filter, function(teachers){
+                return res.render('teachers/index', {filter, teachers}) 
+            })
+        }else{
+            Teacher.all(function(teachers){
             
-            return res.render('teachers/index', {teachers}) 
-        })
+                return res.render('teachers/index', {teachers}) 
+            })
+        }
+
         
     },
     create(req, res){

@@ -25,6 +25,12 @@
                      {{student.grade}}                              
                 </div>
             </div>
+            <div class="item">
+            <div>Aluno de</div>
+                <div>
+                     {{student.teacher_name}}                              
+                </div>
+            </div>
              <input type="hidden" name="id" value= {{student.id}}>
             <a href="/students/{{student.id}}/edit" class="button">Editar</a>
         </section>

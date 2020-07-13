@@ -2,12 +2,27 @@
 
 {% block content %}
     <div class="card table-container">
-        <a href="/teachers/create">Novo</a>
+
+        <div class="header">
+            <a class="button" href="/teachers/create">Novo</a>
+            <form action="/teachers" method="GET">
+                <input 
+                    type="text"
+                    name="filter"
+                    placeholder="Nome ou Diciplina"
+                    value="{{filter}}"
+                    >
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+
+        
         <table width="100%">
             <thead>
                 <tr>
                     <th>Name</th>
                     <th>Acompanhamento</th>
+                    <th>Alunos</th>
                     <th>Ação</th>
 
                 </tr>
@@ -22,6 +37,7 @@
 
                     {% set name = value %}
                     <td><span>{{teacher.subjects_taught}}</span></td>
+                     <td>{{teacher.total_students}}</td>
                     <td><a href="/teachers/{{teacher.id}}">Ver</a></td>
                 </tr>
                 {% endfor %}
