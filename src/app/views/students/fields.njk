@@ -26,8 +26,8 @@
                 <div>
                     <input 
                         type="date" 
-                        name="birth"
-                        value="{{student.date}}"
+                        name="birth_date"
+                        value="{{student.birth_date}}"
                        
                      >
                 </div>
@@ -46,52 +46,52 @@
              <div class="item">
                 <div>Escolaridade</div>
                 <div>
-                      <select name="scholarity">
+                      <select name="education_level">
                         <option 
                             value="EF5"
-                            {% if student.scholarity == "EF5" %}
+                            {% if student.education_level == "EF5" %}
                                 selected
                             {% endif %}
                             >5º Fundamental
                         </option>
                         <option 
                             value="EF6"
-                            {% if student.scholarity == "EF6" %}
+                            {% if student.education_level == "EF6" %}
                                 selected
                             {% endif %}
                             >6º Fundamental
                         </option>
                         <option 
                             value="EF7"
-                            {% if student.scholarity == "EF7" %}
+                            {% if student.education_level == "EF7" %}
                                 selected
                             {% endif %}
                             >7º Fundamental
                         </option>
                         <option 
                             value="EF8"
-                            {% if student.scholarity == "EF8" %}
+                            {% if student.education_level == "EF8" %}
                                 selected
                             {% endif %}
                             >8º Fundamental
                         </option>
                         <option 
                             value="EM1"
-                            {% if student.scholarity == "EM1" %}
+                            {% if student.education_level == "EM1" %}
                                 selected
                             {% endif %}
                             >1º Ensino Médio
                         </option>
                         <option 
                             value="EM2"
-                            {% if student.scholarity == "EM2" %}
+                            {% if student.education_level == "EM2" %}
                                 selected
                             {% endif %}
                             >2º Ensino Médio
                         </option>
                         <option 
                             value="EM3"
-                            {% if student.scholarity == "EM3" %}
+                            {% if student.education_level == "EM3" %}
                                 selected
                             {% endif %}
                             >3º Ensino Médio
