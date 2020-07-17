@@ -24,6 +24,7 @@ module.exports = {
                     page
                 }
                 
+                
                 return res.render('teachers/index', {teachers, pagination, filter})
             }
         }
