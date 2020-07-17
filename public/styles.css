@@ -112,6 +112,7 @@ header{
 }
 
 .details .item:last-child{
+
     border: none;
 }
 .details h3,
@@ -296,4 +297,34 @@ td:last-child{
     box-sizing: border-box;
     padding: 4px 8px;
 
+}
+
+/*pagination*/
+.table-container{
+    display: grid;
+    grid-template: 64px 1fr 64px / 1fr;
+}
+
+.table-container .header{
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination{
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+        
+}
+
+.pagination a,
+.pagination span{
+    color:white;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.pagination a:hover{
+    padding: 16px;
+    transition: 400ms;
 }

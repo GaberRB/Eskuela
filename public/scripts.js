@@ -7,18 +7,83 @@ for (item of menuItem) {
         item.classList.add('active')
 }
 
-//retorna span estilizado
-const trs = document.querySelectorAll('.lines')
-let id = 0
-for (tr of trs) {
-    id = id + 1
-    let elements =  document.getElementById(id).textContent.split(',')
-    console.log(elements)
-    document.getElementById(id).innerHTML = ""
-    for (element of elements){
-        console.log(document.getElementById(id).innerHTML)
-        document.getElementById(id).innerHTML += ` <span>${element}</span>`
+// //retorna span estilizado
+// const trs = document.querySelectorAll('.lines')
+// let id = 0
+// for (tr of trs) {
+//     id = id + 1
+//     let elements =  document.getElementById(id).textContent.split(',')
+//     console.log(elements)
+//     document.getElementById(id).innerHTML = ""
+//     for (element of elements){
+//         console.log(document.getElementById(id).innerHTML)
+//         document.getElementById(id).innerHTML += ` <span>${element}</span>`
+
+//     }
+
+// }
+
+
+/*pagination*/
+//paginação
+function paginate(selectedPage, totalPages) {
+    let pages = [],
+        oldPage
+
+    for (let currentPage = 1; currentPage <= totalPages; currentPage++) {
+
+
+        const firstAndLastPage = currentPage == 1 || currentPage == totalPages
+        const pagesAfterSelectedPage = currentPage <= selectedPage + 2
+        const pagesBeforeSelectedPage = currentPage >= selectedPage - 2
+        if (firstAndLastPage || pagesBeforeSelectedPage && pagesAfterSelectedPage) {
+
+
+            if (oldPage && currentPage - oldPage > 2) {
+                pages.push('...')
+
+            }
+
+            if (oldPage && currentPage - oldPage == 2) {
+                pages.push(oldPage + 1)
+
+            }
+
+            pages.push(currentPage)
+            oldPage = currentPage
+
+        }
 
     }
+    return pages
+}
+function createPaginaton(pagination){
+    const filter = pagination.dataset.filter
+    const page = +pagination.dataset.page
+    const total = +pagination.dataset.total
+    const pages = paginate(page, total)
+    let elements = ""
+
+    for (let page of pages) {
+        if (String(page).includes('...')) {
+            elements += `<span>${page}</span>`
+        } else {
+            if (filter) {
+                elements += `<a href="?page=${page}&filter=${filter}">${page}</a>`
+            } else {
+                elements += `<a href="?page=${page}">${page}</a>`
+            }
+
+        }
+
+    }
+
+    pagination.innerHTML = elements
+
+}
+
+const pagination = document.querySelector('.pagination')
+if (pagination) {
+    createPaginaton(pagination)
 
 }
